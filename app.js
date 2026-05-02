@@ -234,7 +234,8 @@ function startCBT(courseCode, levelId, chapterIdx) {
   });
   if (!chapter || !chapter.questions.length) return;
 
-  const questions = shuffle([...chapter.questions]);
+  const limit = chapter.questionLimit || chapter.questions.length;
+const questions = shuffle([...chapter.questions]).slice(0, limit);
   cbtState = { questions, current: 0, score: 0, answered: false };
   document.getElementById('cbt-modal-title').textContent = `Chapter ${chapter.number} — CBT Practice`;
   document.getElementById('cbt-modal-sub').textContent = chapter.title;
