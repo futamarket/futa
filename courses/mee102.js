@@ -18,6 +18,7 @@ PORTAL_INJECT("MEE 102", [
   {
     number: 1,
     title: "Workshop Safety, Measurement & Introduction to Engineering Materials",
+    questionLimit: 40,
     summary: "Engineering workshop activities require strict safety measures to prevent injury and equipment damage. Safety involves knowing the rules, wearing appropriate PPE, and understanding hazards. Workshop measurement covers precision instruments used to determine dimensions accurately. Engineering materials are broadly classified as metals (ferrous and non-ferrous) and non-metals, each with distinct physical and mechanical properties that determine their application in engineering.",
     keyPoints: [
       "Safety: keep workshop clean, pathways clear, machines switched off when not in use",
@@ -531,6 +532,7 @@ PORTAL_INJECT("MEE 102", [
   {
     number: 2,
     title: "Benchwork and Fitting Practices",
+    questionLimit: 40,
     summary: "Benchwork refers to manual workshop operations carried out at a fitter's bench using hand tools. Fitting is the assembly of component parts of equipment or machinery to precise tolerances. Key operations include filing, chiselling, sawing, riveting, threading (tapping and dieing), drilling, and marking out. Each operation requires specific tools and techniques.",
     keyPoints: [
       "Fitting: assembly of component parts of equipment or a machine",
@@ -999,6 +1001,7 @@ PORTAL_INJECT("MEE 102", [
   {
     number: 3,
     title: "Machining",
+    questionLimit: 40,
     summary: "Machining is the process of removing material from a work piece using machine tools to produce components of the required shape and size. Major machine tools include the lathe, milling machine, shaping machine, drilling machine, and grinding machine. Each machine performs specific operations using single-point or multi-point cutting tools, and appropriate cutting fluids are applied to cool the tool and work piece.",
     keyPoints: [
       "Lathe machine: turning, facing, boring, taper turning, screw cutting, knurling, parting-off",
@@ -1389,6 +1392,7 @@ PORTAL_INJECT("MEE 102", [
   {
     number: 4,
     title: "Welding",
+    questionLimit: 40,
     summary: "Welding is the process of joining two similar materials together under the influence of heat, with or without pressure, with or without filler metal. Welding methods include electric arc welding, gas welding (oxy-acetylene), resistance welding (spot, seam, projection), and friction welding. Each method generates heat from different sources. Proper safety equipment, correct electrode selection, and knowledge of welding defects are essential.",
     keyPoints: [
       "Welding: joining two similar materials under heat; produces a permanent joint",
@@ -1811,6 +1815,7 @@ PORTAL_INJECT("MEE 102", [
   {
     number: 5,
     title: "Automobile Engineering",
+    questionLimit: 40,
     summary: "Automobile engineering covers the design, construction, and maintenance of vehicles. A vehicle is a self-propelled machine for the transportation of passengers and goods. Key areas include internal combustion engines (petrol and diesel), the battery and electrical system, the braking system, clutch, transmission, and routine vehicle maintenance. Understanding engine cycles, lubrication, cooling, and regular checks is essential for automotive engineers.",
     keyPoints: [
       "Automobile: self-propelled vehicle for transportation of passengers and goods",
@@ -2125,6 +2130,7 @@ PORTAL_INJECT("MEE 102", [
   {
     number: 6,
     title: "Refrigeration and Air-Conditioning",
+    questionLimit: 40,
     summary: "Refrigeration is a process of achieving a temperature lower than the surroundings through the use of energy — it is not a spontaneous process. Air-conditioning is the treatment of air to simultaneously control its temperature, humidity, cleanliness, and circulation for comfort or industrial purposes. The vapour compression refrigeration system (VCRS) is the most common, consisting of a compressor, condenser, expansion device, and evaporator. Refrigerants are the working fluids that carry heat through the system.",
     keyPoints: [
       "Refrigeration: achieving lower temperatures than surroundings; non-spontaneous process requiring energy",
