@@ -237,10 +237,19 @@ function startCBT(courseCode, levelId, chapterIdx) {
   const limit = chapter.questionLimit || chapter.questions.length;
 const questions = shuffle([...chapter.questions]).slice(0, limit);
   cbtState = { questions, current: 0, score: 0, answered: false };
+   let cbtTimer = null;
+   timeLimit: (chapter.timeLimit || 0) * 60
+};
   document.getElementById('cbt-modal-title').textContent = `Chapter ${chapter.number} — CBT Practice`;
   document.getElementById('cbt-modal-sub').textContent = chapter.title;
   document.getElementById('cbt-modal').classList.add('open');
   renderCBTQuestion();
+     // ← ADD THIS: start the timer
+  clearInterval(cbtTimer);
+  if (cbtState.timeLimit > 0) {
+    cbtState.secondsLeft = cbtState.timeLimit;
+    startCBTTimer();
+  }
 }
 
 function renderCBTQuestion() {
@@ -250,7 +259,12 @@ function renderCBTQuestion() {
   const pct = (current / total * 100).toFixed(0);
   document.getElementById('cbt-body').innerHTML = `
     <div class="cbt-progress"><div class="cbt-progress-bar" style="width:${pct}%"></div></div>
-    <div class="cbt-q-count">Question ${current + 1} of ${total}</div>
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+  <div class="cbt-q-count">Question ${current + 1} of ${total}</div>
+  ${cbtState.timeLimit > 0 
+    ? `<div id="cbt-timer" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; font-weight:600; color:var(--gold); background:rgba(201,146,26,0.1); border:1px solid rgba(201,146,26,0.3); padding:4px 12px; border-radius:4px;">--:--</div>` 
+    : ''}
+</div>
     <div class="cbt-question">${q.text}</div>
     <div class="cbt-options">
       ${q.options.map((opt, i) => `
@@ -294,13 +308,21 @@ function nextCBTQuestion() {
   else renderCBTQuestion();
 }
 
-function showCBTResults() {
+function showCBTResults(timeExpired = false) {
+  clearInterval(cbtTimer); // ← stop the timer
   const { score, questions } = cbtState;
   const total = questions.length;
   const pct = Math.round(score / total * 100);
   const grade = pct >= 70 ? '🏆 Distinction!' : pct >= 50 ? '👍 Good Effort!' : '📚 Keep Studying!';
+  
+  // ← add the time expired message
+  const timeMsg = timeExpired 
+    ? `<div style="color:#c0392b; font-size:0.8rem; margin-bottom:12px; font-family:'Lora',serif; font-style:italic;">⏰ Time expired — quiz submitted automatically.</div>` 
+    : '';
+
   document.getElementById('cbt-body').innerHTML = `
     <div class="cbt-score-screen">
+      ${timeMsg}
       <div class="score-ring" style="--pct:${pct * 3.6}deg">
         <div class="score-num">${pct}%</div>
       </div>
@@ -315,13 +337,17 @@ function showCBTResults() {
 }
 
 function restartCBT() {
+  clearInterval(cbtTimer);
   cbtState.current = 0;
   cbtState.score = 0;
+  cbtState.secondsLeft = cbtState.timeLimit;
   cbtState.questions = shuffle([...cbtState.questions]);
   renderCBTQuestion();
+  if (cbtState.timeLimit > 0) startCBTTimer();
 }
 
 function closeCBT() {
+  clearInterval(cbtTimer); // ← add this line
   document.getElementById('cbt-modal').classList.remove('open');
 }
 
@@ -346,6 +372,29 @@ function shuffle(arr) {
 
 function escQ(str) {
   return (str || '').replace(/'/g, "\\'");
+}
+
+function startCBTTimer() {
+  updateTimerDisplay();
+  cbtTimer = setInterval(() => {
+    cbtState.secondsLeft--;
+    updateTimerDisplay();
+    if (cbtState.secondsLeft <= 0) {
+      clearInterval(cbtTimer);
+      showCBTResults(true); // true = time expired
+    }
+  }, 1000);
+}
+
+function updateTimerDisplay() {
+  const el = document.getElementById('cbt-timer');
+  if (!el) return;
+  const m = Math.floor(cbtState.secondsLeft / 60);
+  const s = cbtState.secondsLeft % 60;
+  const display = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  el.textContent = display;
+  // turn red when under 1 minute
+  el.style.color = cbtState.secondsLeft <= 60 ? '#c0392b' : '';
 }
 
 /* ─────────────────────────────────────────────────────────────────
