@@ -18,6 +18,7 @@ PORTAL_INJECT("BIO 102", [
     number: 1,
     title: "Survey of the Animal Kingdom & Classification",
     questionLimit: 40,
+    timeLimit: 15,
     summary: "The Animal Kingdom (Kingdom Animalia) is the largest and most diverse kingdom of multicellular eukaryotes. Animals are classified based on body symmetry, number of germ layers, presence or absence of a coelom, embryonic development pattern, and other structural features. Major phyla include Porifera, Cnidaria, Platyhelminthes, Nematoda, Annelida, Arthropoda, Mollusca, Echinodermata, and Chordata. Key concepts include diploblasty vs. triploblasty, acoelomate vs. pseudocoelomate vs. coelomate, and protostome vs. deuterostome development.",
     keyPoints: [
       "Diploblastic: two germ layers (ectoderm + endoderm) — e.g. Cnidaria, Porifera",
