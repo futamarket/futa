@@ -10,6 +10,7 @@
 let state = { page: "home", levelId: null, semId: null, courseCode: null };
 let cbtState = {};
 let activeSemTab = {};
+ let cbtTimer = null;
 
 /* ─────────────────────────────────────────────────────────────────
    ROUTING
@@ -237,7 +238,6 @@ function startCBT(courseCode, levelId, chapterIdx) {
   const limit = chapter.questionLimit || chapter.questions.length;
 const questions = shuffle([...chapter.questions]).slice(0, limit);
   cbtState = { questions, current: 0, score: 0, answered: false };
-   let cbtTimer = null;
    timeLimit: (chapter.timeLimit || 0) * 60
 };
   document.getElementById('cbt-modal-title').textContent = `Chapter ${chapter.number} — CBT Practice`;
@@ -249,7 +249,7 @@ const questions = shuffle([...chapter.questions]).slice(0, limit);
   if (cbtState.timeLimit > 0) {
     cbtState.secondsLeft = cbtState.timeLimit;
     startCBTTimer();
-  
+  }
 }
 
 function renderCBTQuestion() {
