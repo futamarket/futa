@@ -249,7 +249,7 @@ const questions = shuffle([...chapter.questions]).slice(0, limit);
   if (cbtState.timeLimit > 0) {
     cbtState.secondsLeft = cbtState.timeLimit;
     startCBTTimer();
-  }
+  
 }
 
 function renderCBTQuestion() {
