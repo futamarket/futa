@@ -19,6 +19,7 @@ PORTAL_INJECT("MEE 102", [
     number: 1,
     title: "Workshop Safety, Measurement & Introduction to Engineering Materials",
     questionLimit: 40,
+    timeLimit: 15, 
     summary: "Engineering workshop activities require strict safety measures to prevent injury and equipment damage. Safety involves knowing the rules, wearing appropriate PPE, and understanding hazards. Workshop measurement covers precision instruments used to determine dimensions accurately. Engineering materials are broadly classified as metals (ferrous and non-ferrous) and non-metals, each with distinct physical and mechanical properties that determine their application in engineering.",
     keyPoints: [
       "Safety: keep workshop clean, pathways clear, machines switched off when not in use",
