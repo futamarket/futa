@@ -100,7 +100,7 @@ function renderLevel(levelId) {
   const lvl = PORTAL_DATA.levels.find(l => l.id === levelId);
   if (!lvl) return;
 
-  document.getElementById('level-tag').textContent = 'Department of Project Management Technology';
+  document.getElementById('level-tag').textContent = 'All Departments';
   document.getElementById('level-title').textContent = lvl.fullName + ' — ' + lvl.name;
   document.getElementById('level-desc').textContent = lvl.description;
 
