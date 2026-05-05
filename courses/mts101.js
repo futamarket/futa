@@ -17,6 +17,7 @@ PORTAL_INJECT("MTS 101", [
     number: 1,
     title: "Set Theory, Real Numbers & Mathematical Induction",
     questionLimit: 20,
+    timeLimit: 15,
     summary: "Set theory deals with collections of objects, their relationships, and operations like union, intersection, and complement. The principle of mathematical induction is used to prove propositions for all positive integers. Real numbers satisfy properties such as closure, commutativity, associativity, distributivity, and existence of inverses.",
     keyPoints: [
       "Mathematical induction: prove base case, assume true for k, prove true for k+1",
@@ -158,6 +159,7 @@ PORTAL_INJECT("MTS 101", [
     number: 2,
     title: "Circular Measure & Trigonometric Functions",
     questionLimit: 20,
+    timeLimit: 15,
     summary: "This section covers trigonometric identities, compound angle formulae, double angle formulae, and half-angle substitutions. Key identities include sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ, and 1 + cot²θ = cosec²θ. Compound angles and the t-formulae (using t = tan½x) are also essential.",
     keyPoints: [
       "Pythagorean identities: sin²θ + cos²θ = 1; 1 + tan²θ = sec²θ; 1 + cot²θ = cosec²θ",
@@ -329,6 +331,7 @@ PORTAL_INJECT("MTS 101", [
     number: 3,
     title: "Sequences & Series",
     questionLimit: 20,
+    timeLimit: 15,
     summary: "Sequences are ordered lists of numbers following a pattern. Arithmetic progressions (AP) have a constant difference, while geometric progressions (GP) have a constant ratio. Key formulae include the nth term, sum of n terms, and sum to infinity for convergent geometric series.",
     keyPoints: [
       "AP nth term: Uₙ = a + (n−1)d; Sum: Sₙ = n/2[2a + (n−1)d]",
@@ -458,6 +461,7 @@ PORTAL_INJECT("MTS 101", [
     number: 4,
     title: "Binomial Theorem & Expansion",
     questionLimit: 20,
+    timeLimit: 15,
     summary: "The binomial theorem provides a formula for expanding (a + b)ⁿ. For positive integer n: (a+b)ⁿ = Σ C(n,r) aⁿ⁻ʳ bʳ. For fractional or negative n, the expansion is valid for |x| < 1. Pascal's triangle gives the binomial coefficients, and the general term is T(r+1) = C(n,r) aⁿ⁻ʳ bʳ.",
     keyPoints: [
       "General term: T(r+1) = C(n,r) aⁿ⁻ʳ bʳ",
