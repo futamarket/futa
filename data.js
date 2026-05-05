@@ -171,7 +171,7 @@ const PORTAL_DATA = {
       id: "300",
       name: "300 Level",
       fullName: "Third Year",
-      description: "Core departmental courses, commercial law and professional management skills.",
+      description: "Core departmental courses.",
       semesters: [
         {
           id: "1st",
@@ -209,7 +209,7 @@ const PORTAL_DATA = {
       id: "400",
       name: "400 Level",
       fullName: "Fourth Year",
-      description: "Advanced project management, research methodology, industrial engineering and SIWES.",
+      description: "Advanced Courses and SIWES.",
       semesters: [
         {
           id: "1st",
@@ -243,7 +243,7 @@ const PORTAL_DATA = {
       id: "500",
       name: "500 Level",
       fullName: "Fifth Year",
-      description: "Final year advanced courses, project finance, professional conduct and final year research project.",
+      description: "Final year advanced courses, professional conduct and final year research project.",
       semesters: [
         {
           id: "1st",
@@ -277,7 +277,7 @@ const PORTAL_DATA = {
       id: "pgd",
       name: "PGD",
       fullName: "Postgraduate Diploma",
-      description: "Postgraduate diploma bridging courses in project management technology.",
+      description: "Postgraduate diploma bridging courses.",
       semesters: [{ id: "all", name: "All Courses", courses: [] }]
     },
 
