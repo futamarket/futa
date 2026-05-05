@@ -418,6 +418,7 @@ PORTAL_INJECT("BIO 102", [
     number: 2,
     title: "Phylum Porifera (Sponges) & Phylum Cnidaria (Coelenterata)",
     questionLimit: 40,
+    timeLimit: 15,
     summary: "Porifera (sponges) are the simplest multicellular animals; they are parazoan, lack true tissues, and are filter feeders with a unique canal system. Cnidaria (jellyfish, Hydra, coral, sea anemones) are diploblastic eumetazoans with radial symmetry, nematocysts (stinging cells), and a gastrovascular cavity. Cnidarians alternate between a sessile polyp form and a free-swimming medusa form. There are three main classes: Hydrozoa (Hydra, Obelia), Scyphozoa (true jellyfish), and Anthozoa (sea anemones, corals).",
     keyPoints: [
       "Porifera: pore-bearing; canal system (ostia → spongocoel → osculum); filter feeders",
@@ -809,6 +810,7 @@ PORTAL_INJECT("BIO 102", [
     number: 3,
     title: "Platyhelminthes, Nematoda & Annelida",
     questionLimit: 40,
+    timeLimit: 15,
     summary: "Platyhelminthes (flatworms) are triploblastic, acoelomate, bilaterally symmetrical worms. Classes include Turbellaria (free-living), Trematoda (flukes), and Cestoda (tapeworms). Nematoda (roundworms) are pseudocoelomate, bilaterally symmetrical, and possess a cuticle and complete digestive system. Annelida are the first coelomate worm-like animals; their defining feature is true metamerism. Classes include Polychaeta (marine bristle worms), Oligochaeta (earthworms), and Hirudinea (leeches).",
     keyPoints: [
       "Platyhelminthes: triploblastic, acoelomate; flame cells for excretion; ladder-type nervous system; hermaphroditic",
@@ -1122,6 +1124,7 @@ PORTAL_INJECT("BIO 102", [
     number: 4,
     title: "Arthropoda, Mollusca & Echinodermata",
     questionLimit: 40,
+    timeLimit: 15,
     summary: "Arthropoda is the largest phylum, characterised by jointed appendages, a chitinous exoskeleton, and a haemocoel. Major classes: Insecta, Arachnida, Crustacea, Myriapoda. Mollusca have a mantle, foot, and visceral mass; classes include Gastropoda, Bivalvia, and Cephalopoda. Echinodermata are exclusively marine, pentaradially symmetrical adults with a water vascular system and internal calcareous skeleton.",
     keyPoints: [
       "Arthropoda: jointed appendages, chitinous exoskeleton, haemocoelic cavity, metamorphosis (complete = holometabolous; incomplete = hemimetabolous)",
@@ -1387,6 +1390,7 @@ PORTAL_INJECT("BIO 102", [
     number: 5,
     title: "Phylum Chordata: Protochordates & Vertebrates",
     questionLimit: 40,
+    timeLimit: 15,
     summary: "Chordates are defined by four key features at some stage of development: a notochord, a dorsal hollow nerve cord, pharyngeal gill slits, and a post-anal tail. Protochordates (invertebrate chordates) include Urochordata (tunicates/sea squirts) and Cephalochordata (lancelets/Amphioxus). Vertebrates possess a vertebral column and include Agnatha (jawless fish), Chondrichthyes (cartilaginous fish), Osteichthyes (bony fish), Amphibia, Reptilia, Aves (birds), and Mammalia.",
     keyPoints: [
       "Four chordate hallmarks: notochord, dorsal hollow nerve cord, pharyngeal gill slits, post-anal tail",
@@ -1668,6 +1672,7 @@ PORTAL_INJECT("BIO 102", [
     number: 6,
     title: "Introduction to Ecology",
     questionLimit: 40,
+    timeLimit: 15,
     summary: "Ecology is the scientific study of interactions between organisms and their environment. Key concepts include abiotic (physical) and biotic (living) factors, habitat, niche, population, community, ecosystem, and biome. Feeding relationships (food chains, food webs, trophic levels) and biogeochemical cycles (carbon, nitrogen, water, phosphorus) describe the flow of energy and materials. Ecological adaptations allow organisms to survive in specific environments — terrestrial, aquatic (freshwater and marine), arboreal, and desert.",
     keyPoints: [
       "Ecology levels: individual → population → community → ecosystem → biosphere",
