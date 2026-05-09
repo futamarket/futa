@@ -120,6 +120,7 @@ const PORTAL_DATA = {
             { code: "FNT 102", title: "Introductory Accounting II",      description: "Financial statements, depreciation, inventory valuation and trial balance.", chapters: [] },
             { code: "CSC 102", title: "Introduction to Computing",       description: "Computer hardware, software, internet, programming basics and applications.", chapters: [] },
             { code: "BIO 102", title: "General Biology II",              description: "", chapters: [] },
+            { code: "CSC 104", title: "Introduction to Computing",       description: "", chapters: [] },
           ]
         }
       ]
