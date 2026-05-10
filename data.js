@@ -121,6 +121,8 @@ const PORTAL_DATA = {
             { code: "CSC 102", title: "Introduction to Computing",       description: "Computer hardware, software, internet, programming basics and applications.", chapters: [] },
             { code: "BIO 102", title: "General Biology II",              description: "", chapters: [] },
             { code: "MTS 104", title: "Applied Mathematics",             description: "", chapters: [] },
+            { code: "EEE 102", title: "Software Application in EEE",     description: "", chapters: [] },
+            { code: "GNS 102", title: "Use of English II",               description: "", chapters: [] },
           ]
         }
       ]
